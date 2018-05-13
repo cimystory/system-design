@@ -1,0 +1,15 @@
+设计Amazon Product Page, 就是在SQL里面一个产品有多个图片多个价格的话怎么设计数据库。然后后台提取数值render到页面上得时候，class怎么设计，
+服务器怎么安排之类的, 中间也有讨论怎样给suggest product，我提到可以建一个Product weighted graph, 然后用BFS
+
+
+这道题遇见过，我当时给的答案是这样的：
+        Table 1 (一个product对应多个description. 也就是一对多). 
+        product_id, description_id
+        1001 90991
+        1002 120101
+        1001 90980
+
+        Table 2 (一个description对应一个price和picture, 一对一)
+        description_id, price, picture
+        
+        
