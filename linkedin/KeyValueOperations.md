@@ -13,3 +13,5 @@ distibute hash入手，讲了讲分布式存储系统，类似 Dynamo. 后来面
 合并存储块
 4. Update： Copy on Write, 先将原来的值copy出来存入新的块，update完成后
 update index，这样可以避免读写冲突的问题。原来的内容会被垃圾回收处理。
+
+核心思想：把delete和update变成磁盘的顺序存储
